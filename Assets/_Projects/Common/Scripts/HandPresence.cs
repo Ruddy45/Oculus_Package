@@ -22,6 +22,17 @@ public class HandPresence : MonoBehaviour
 
 	private void Update() => UpdateHandAnimation();
 
+	private void OnValidate()
+	{
+		InputDeviceCharacteristics leftHand = InputDeviceCharacteristics.Left;
+		InputDeviceCharacteristics rightHand = InputDeviceCharacteristics.Right;
+		if (!_controllerCharacteristics.HasFlag(leftHand) && !_controllerCharacteristics.HasFlag(rightHand))
+		{
+			Debug.LogWarning("Accept only one Left or Right" + _controllerCharacteristics);
+			_controllerCharacteristics = InputDeviceCharacteristics.None;
+		}
+	}
+
 	private InputDevice GetDevice()
 	{
 		List<InputDevice> devices = new List<InputDevice>();

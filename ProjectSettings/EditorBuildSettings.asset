@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Projects/Grab/Scenes/Grab.unity
     guid: d1e928f6611b1a1498ab727fe6f0a7c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Projects/RaycastInteraction/Scenes/RaycastInteraction.unity
     guid: 73fd0f273e8acee458ce2b804f9ba7c2
+  - enabled: 0
+    path: Assets/_Projects/Teleport/Scenes/Teleport.unity
+    guid: 65920f464a8cf3b4383ba6574ea45b29
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfaf6e60bef91cd499f1299e80270e6a,
       type: 2}
